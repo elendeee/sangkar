@@ -21,3 +21,5 @@ ExportedObj/
 *.pdb
 *.mdb
 *.opendb
+Packages/*.tgz
+Assets/SamplesResources/
