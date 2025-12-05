@@ -3,6 +3,7 @@ using UnityEngine;
 public class InformationScript : MonoBehaviour
 {
     public GameObject InformationPanel;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -16,6 +17,20 @@ public class InformationScript : MonoBehaviour
         {
             bool isActive = InformationPanel.activeSelf;
             InformationPanel.SetActive(!isActive);
+        }
+    }
+
+    public void ToggleSound()
+    {
+        if (audioSource == null) return;
+
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();     // Klik kedua → berhenti
+        }
+        else
+        {
+            audioSource.Play();     // Klik pertama & ketiga → bunyi lagi
         }
     }
 }
