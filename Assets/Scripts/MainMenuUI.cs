@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuUI : MonoBehaviour
 {
     public Credits creditsPopup;
+    public GameObject PopupSettings; // WAJIB kapital P sesuai nama prefab
 
     // Tombol START AR
     public void StartAR()
@@ -11,10 +12,13 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene("AR");
     }
 
-    // Tombol SETTINGS
+    // Tombol SETTINGS (MUNCULKAN POPUP, BUKAN PINDAH SCENE)
     public void OpenSettings()
     {
-        SceneManager.LoadScene("Settings");
+        if (PopupSettings != null)
+            PopupSettings.SetActive(true);
+        else
+            Debug.LogError("PopupSettings belum di-assign di Inspector!");
     }
 
     // Tombol CREDITS
@@ -27,6 +31,6 @@ public class MainMenuUI : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Game Quit"); // Ini hanya kelihatan di Editor
+        Debug.Log("Game Quit"); // hanya kelihatan di Editor
     }
 }
