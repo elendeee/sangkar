@@ -131,7 +131,8 @@ GameObject:
   - component: {fileID: 32132490}
   - component: {fileID: 32132489}
   - component: {fileID: 32132492}
-  - component: {fileID: 32132493}
+  - component: {fileID: 32132494}
+  - component: {fileID: 32132495}
   m_Layer: 0
   m_Name: Scene-3
   m_TagString: Untagged
@@ -209,7 +210,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 32132493}
+  mPreview: {fileID: 32132495}
 --- !u!4 &32132491
 Transform:
   m_ObjectHideFlags: 0
@@ -244,7 +245,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayTwoSoundsOnTracking
   narasiAudio: {fileID: 1102490963}
   sfxAudio: {fileID: 2025860414}
---- !u!114 &32132493
+--- !u!114 &32132494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32132487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6540e1a2f1c51df41b080c9c3dcc79d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MarkerInfo
+  infoText: Sangkuriang lalu memerintah Tumang untuk mengejar buruannya tadi, tetapi
+    si Tumang diam saja dan tidak mau mengikuti perintah Sangkuriang. Karena sangat
+    jengkel pada Tumang, maka Sangkuriang lalu mengusir Tumang dan tidak diijinkan
+    pulang ke rumah bersamanya lagi.
+  infoPanel: {fileID: 915139218}
+  infoTextUI: {fileID: 380173984}
+  defaultText: Marker has not been detected yet. Please point your camera at the
+    marker!
+--- !u!114 &32132495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,7 +341,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -330,10 +351,14 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: -2009946040, guid: faff742144417154caf29f2f4da32f85,
+      type: 3}
+    m_PressedSprite: {fileID: -2009946040, guid: faff742144417154caf29f2f4da32f85,
+      type: 3}
+    m_SelectedSprite: {fileID: -2009946040, guid: faff742144417154caf29f2f4da32f85,
+      type: 3}
+    m_DisabledSprite: {fileID: -798782616, guid: 90a3212fe35421f49a69ba2c12ef07f9,
+      type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -344,7 +369,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 86004069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1482704643}
+        m_TargetAssemblyTypeName: AR_Ui, Assembly-CSharp
+        m_MethodName: ToggleInformation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &86004069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -440,7 +477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1723998911, guid: d9839cf484d1e584c8c424eafbd16b07, type: 3}
+  m_Sprite: {fileID: -221908632, guid: ee75ac88b048e5f47b8e104ca6e4d2ea, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -579,6 +616,144 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 261016579}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &380173982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 380173983}
+  - component: {fileID: 380173985}
+  - component: {fileID: 380173984}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &380173983
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380173982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 915139219}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3.2961, y: 2.8077}
+  m_SizeDelta: {x: 1573.1, y: 169.24}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &380173984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380173982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Marker has not been detected yet. Please point your camera at the marker!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 5b623e9861b8d984fbbf0cb690f9f71c, type: 2}
+  m_sharedMaterial: {fileID: 206580625346448535, guid: 5b623e9861b8d984fbbf0cb690f9f71c,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4279637544
+  m_fontColor: {r: 0.15723258, g: 0.08553847, b: 0.08553847, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &380173985
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380173982}
+  m_CullTransparentMesh: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,52 +2251,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1706407675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &786263360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 786263362}
-  - component: {fileID: 786263361}
-  m_Layer: 0
-  m_Name: SFXManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &786263361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786263360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16187437481026a438ed78ef0e207437, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SFXManager
-  sfxVolume: 1
-  uiSFX: {fileID: 0}
---- !u!4 &786263362
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786263360}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 477.09293, y: 251.96875, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,6 +2426,82 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &915139218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 915139219}
+  - component: {fileID: 915139221}
+  - component: {fileID: 915139220}
+  m_Layer: 5
+  m_Name: InformationPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &915139219
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915139218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 380173983}
+  m_Father: {fileID: 1482704642}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -4.0008545, y: -306.552}
+  m_SizeDelta: {x: -263.78, y: -850.435}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &915139220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915139218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1019168786, guid: 0e1b02b012bd35e4e8e8a77b3f6ff4f1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &915139221
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915139218}
+  m_CullTransparentMesh: 1
 --- !u!1 &975818007
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,7 +2994,8 @@ GameObject:
   - component: {fileID: 1185471717}
   - component: {fileID: 1185471716}
   - component: {fileID: 1185471719}
-  - component: {fileID: 1185471720}
+  - component: {fileID: 1185471721}
+  - component: {fileID: 1185471722}
   m_Layer: 0
   m_Name: Scene-1
   m_TagString: Untagged
@@ -2867,7 +3073,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1185471720}
+  mPreview: {fileID: 1185471722}
 --- !u!4 &1185471718
 Transform:
   m_ObjectHideFlags: 0
@@ -2902,7 +3108,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlaySound
   narasiAudio: {fileID: 533300796}
   sfxAudio: {fileID: 649828752}
---- !u!114 &1185471720
+--- !u!114 &1185471721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185471714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6540e1a2f1c51df41b080c9c3dcc79d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MarkerInfo
+  infoText: 'Pada jaman dahulu, di Jawa Barat hiduplah seorang putri raja yang bernama
+    Dayang Sumbi. Ia mempunyai seorang anak laki-laki yang bernama Sangkuriang. '
+  infoPanel: {fileID: 915139218}
+  infoTextUI: {fileID: 380173984}
+  defaultText: Marker has not been detected yet. Please point your camera at the
+    marker!
+--- !u!114 &1185471722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3152,7 +3376,8 @@ GameObject:
   - component: {fileID: 1226850630}
   - component: {fileID: 1226850629}
   - component: {fileID: 1226850632}
-  - component: {fileID: 1226850633}
+  - component: {fileID: 1226850634}
+  - component: {fileID: 1226850635}
   m_Layer: 0
   m_Name: Scene-2
   m_TagString: Untagged
@@ -3230,7 +3455,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1226850633}
+  mPreview: {fileID: 1226850635}
 --- !u!4 &1226850631
 Transform:
   m_ObjectHideFlags: 0
@@ -3265,7 +3490,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayTwoSoundsOnTracking
   narasiAudio: {fileID: 1772391510}
   sfxAudio: {fileID: 1249000663}
---- !u!114 &1226850633
+--- !u!114 &1226850634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226850627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6540e1a2f1c51df41b080c9c3dcc79d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MarkerInfo
+  infoText: 'Anak tersebut sangat gemar berburu di dalam hutan. Setiap berburu, dia
+    selalu ditemani oleh seekor anjing kesayangannya yang bernama Tumang. '
+  infoPanel: {fileID: 915139218}
+  infoTextUI: {fileID: 380173984}
+  defaultText: Marker has not been detected yet. Please point your camera at the
+    marker!
+--- !u!114 &1226850635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3449,7 +3692,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3486479340305941298, guid: 26de0bc39fc846744ba4c04a0e0b4979,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1717282383}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26de0bc39fc846744ba4c04a0e0b4979, type: 3}
 --- !u!1 &1249000662
@@ -3580,6 +3827,52 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1226850631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1267085819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267085821}
+  - component: {fileID: 1267085820}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1267085820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267085819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16187437481026a438ed78ef0e207437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFXManager
+  sfxVolume: 1
+  uiSFX: {fileID: 0}
+--- !u!4 &1267085821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267085819}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 529.7409, y: 249.55327, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1416780447
 PrefabInstance:
@@ -3715,6 +4008,7 @@ GameObject:
   - component: {fileID: 1444623240}
   - component: {fileID: 1444623243}
   - component: {fileID: 1444623244}
+  - component: {fileID: 1444623245}
   m_Layer: 0
   m_Name: Scene-5
   m_TagString: Untagged
@@ -3792,7 +4086,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1444623244}
+  mPreview: {fileID: 1444623245}
 --- !u!4 &1444623242
 Transform:
   m_ObjectHideFlags: 0
@@ -3827,6 +4121,25 @@ MonoBehaviour:
   narasiAudio: {fileID: 528942811}
   sfxAudio: {fileID: 528942811}
 --- !u!114 &1444623244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444623238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6540e1a2f1c51df41b080c9c3dcc79d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MarkerInfo
+  infoText: Mengetahuinya Sangkuriang pun kesal sehingga ia menendang perahu yang
+    sudah dibuatnya terbalik dan kemudian perahu tersebut berubah menjadi gunung
+    yang sekarang dikenal sebagai Gunung Tangkuban Perahu.
+  infoPanel: {fileID: 915139218}
+  infoTextUI: {fileID: 380173984}
+  defaultText: Marker has not been detected yet. Please point your camera at the
+    marker!
+--- !u!114 &1444623245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3998,7 +4311,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -4020,6 +4333,7 @@ RectTransform:
   - {fileID: 86004067}
   - {fileID: 707473170}
   - {fileID: 2115569947}
+  - {fileID: 915139219}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4040,6 +4354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   PopupSettings: {fileID: 2115569940}
+  InformationPanel: {fileID: 915139218}
 --- !u!1001 &1537417061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4607,6 +4922,81 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1706407674}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!1 &1717282382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1717282383}
+  - component: {fileID: 1717282385}
+  - component: {fileID: 1717282384}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1717282383
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717282382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2115569947}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1717282384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717282382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1717282385
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717282382}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1719462122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5122,7 +5512,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: be0a1f27678fb274d959acbd2bcafa82, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5754,4 +6144,4 @@ SceneRoots:
   - {fileID: 1444623242}
   - {fileID: 1706407675}
   - {fileID: 626275172}
-  - {fileID: 786263362}
+  - {fileID: 1267085821}
